@@ -1,0 +1,421 @@
+@import url("/assets/fonts/icomoon.woff");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  position: relative;
+}
+
+/* Este documento es descargado de iconmoon es generado por defecto para la fuente especial de los iconos usados en el footer */
+@font-face {
+  font-family: "icomoon";
+  src: url("/assets/fonts/icomoon.eot?wikd2s");
+  src: url("/assets/fonts/icomoon.eot?wikd2s#iefix") format("embedded-opentype"), url("/assets/fonts/icomoon.ttf?wikd2s") format("truetype"), url("/assets/fonts/icomoon.woff?wikd2s") format("woff"), url("/assets/fonts/icomoon.svg?wikd2s#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=icon-],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-twitter::before {
+  content: "\ea96";
+}
+
+.icon-github::before {
+  content: "\eab0";
+}
+
+.icon-linkedin::before {
+  content: "\eac9";
+}
+
+.header {
+  position: fixed;
+  background-color: transparent;
+  width: 100%;
+  color: #2589bd;
+  z-index: 100;
+}
+.header.internal {
+  background-color: #fff;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+.header.internal .header__title h1 {
+  color: #2589bd;
+  font-weight: 300;
+}
+.header.internal .header__title h1 span {
+  color: #2589bd;
+  font-weight: 500;
+}
+.header.internal .navigation__list li {
+  color: #000;
+}
+.header.internal .navigation__list li a {
+  color: #000;
+}
+.header.internal .navigation__list li a:hover {
+  color: #2589bd;
+}
+.header.internal .navigation__sublist {
+  background-color: #fff;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+.header.internal .navigation__sublist li {
+  color: #000;
+}
+.header.internal .navigation__sublist li::after, .header.internal .navigation__sublist li::before {
+  background-color: #000;
+}
+.header.internal .navigation__sublist li a {
+  color: #000;
+}
+.header.internal .navigation__sublist li a:hover {
+  color: #2589bd;
+}
+.header .container {
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__name {
+  display: none;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 1px;
+  color: #000;
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+.header__name span {
+  display: block;
+  font-family: "Bodoni Moda", serif;
+  font-size: 2.6rem;
+  color: #2589bd;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.header__title h1 {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1.4rem;
+  transition: all 0.3s ease-in-out;
+}
+.header__title h1 span {
+  font-family: "Bodoni Moda", serif;
+  font-size: 2.6rem;
+  display: block;
+  color: #fff;
+  font-weight: 400;
+  transition: all 0.3s ease-in-out;
+}
+.header .navigation {
+  position: relative;
+}
+.header .navigation__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+.header .navigation__list li {
+  display: inline-block;
+  margin-right: 20px;
+  color: #fff;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+  padding: 0 10px 0 10px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.header .navigation__list li::after, .header .navigation__list li::before {
+  content: "";
+  background-color: #fff;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+}
+.header .navigation__list li::after {
+  bottom: -2px;
+  right: 0;
+  width: 0;
+  height: 1px;
+}
+.header .navigation__list li::before {
+  top: 1px;
+  right: 0;
+  height: 0;
+  width: 1px;
+}
+.header .navigation__list li:hover::after {
+  width: 100%;
+}
+.header .navigation__list li:hover::before {
+  height: 100%;
+}
+.header .navigation__list li a {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 300;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+}
+.header .navigation__sublist {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: -90px;
+  left: 0;
+  min-width: 200px;
+  width: auto;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+  padding: 0 20px;
+}
+.header .navigation__sublist.visible {
+  visibility: visible;
+  opacity: 1;
+  z-index: 10;
+}
+.header .navigation__sublist li {
+  margin: 0 0 20px 0;
+  width: max-content;
+}
+.header .navigation__sublist li a {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  width: fit-content;
+}
+
+.main .personal-information {
+  padding: 60px 0;
+  min-height: 600px;
+  height: 100vh;
+  background: url("/assets/img/background.jpeg") center center no-repeat;
+  background-size: cover;
+}
+.main .personal-information .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 80px;
+}
+.main .personal-information__image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.main .personal-information__image img {
+  width: 100%;
+  height: 100%;
+}
+.main .personal-information__name h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  font-family: "Bodoni Moda", serif;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 1.6px;
+  margin: 30px 0 0;
+}
+.main .personal-information .title {
+  font-size: 3.2rem;
+  font-family: "Montserrat", sans-serif;
+  text-transform: capitalize;
+  color: #fff;
+  text-align: center;
+}
+.main .personal-information .title span {
+  text-transform: uppercase;
+}
+.main .personal-information__general h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  margin: 8px 0;
+}
+
+.table-container {
+  width: 100%;
+  padding: 80px 0;
+}
+.table-container h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #2589bd;
+  font-family: "Montserrat", sans-serif;
+  text-transform: capitalize;
+  letter-spacing: 1.6px;
+  font-weight: 400;
+  color: #000;
+}
+.table-container h2 span {
+  font-size: 2.5rem;
+  font-family: "Bodoni Moda", serif;
+  display: block;
+  color: #2589bd;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.table-container table {
+  margin: 30px auto;
+  border-collapse: collapse;
+}
+.table-container table tr {
+  border: 1px solid #000;
+  border-left: none;
+  border-right: none;
+  display: block;
+}
+.table-container table thead {
+  background-color: #a3b4a2;
+}
+.table-container table thead tr {
+  padding: 20px;
+}
+.table-container table thead tr th {
+  display: inline-block;
+  font-size: 1.6rem;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1.6px;
+  text-align: center;
+  width: 250px;
+  padding: 0 20px;
+}
+.table-container table tbody tr {
+  padding: 10px 20px;
+}
+.table-container table tbody tr td {
+  text-align: center;
+  width: 250px;
+  height: 100%;
+  display: inline-block;
+  padding: 0 20px;
+  font-weight: 400;
+  font-size: 1.4rem;
+  font-family: "Montserrat", sans-serif;
+  text-align: justify;
+  letter-spacing: 1px;
+}
+.table-container table tbody tr td:first-child {
+  font-size: 1.4rem;
+  font-family: "Montserrat", sans-serif;
+  text-transform: capitalize;
+  font-weight: 500;
+  text-align: center;
+}
+.table-container table tbody tr td ul li {
+  list-style: disc;
+  margin-bottom: 7px;
+}
+.table-container table tbody tr td ul li::marker {
+  color: #2589bd;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 50px;
+  background-color: #2589bd;
+}
+footer p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 5px;
+  color: #fff;
+}
+footer p a {
+  color: #fff;
+  position: relative;
+  display: inline-block;
+}
+footer p a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -1px;
+  width: 0;
+  height: 1px;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+footer p a:hover::after {
+  width: 100%;
+  left: 0;
+}
+footer .right-box {
+  display: flex;
+  gap: 30px;
+}
+footer .right-box .icon {
+  width: 30px;
+  height: 30px;
+}
+footer .right-box [class^=icon-] {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-size: 2.5rem;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .right-box [class^=icon-]:hover {
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.2);
+}
+
+/*# sourceMappingURL=styles.css.map */

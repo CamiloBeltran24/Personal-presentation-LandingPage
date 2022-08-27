@@ -1,0 +1,24 @@
+{
+  "name": "personal-presentation-landingpage",
+  "version": "1.0.0",
+  "description": "This Landing Page was bulded for a Unersity Course called \"Programacion de sistios web\" - Universidad Nacional Abierta Y A Distancia",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch  assets/scss/styles.scss assets/css/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CamiloBeltran24/Personal-presentation-LandingPage.git"
+  },
+  "keywords": [],
+  "author": "Christian Camilo Beltran Fonseca <cambelf.dev@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CamiloBeltran24/Personal-presentation-LandingPage/issues"
+  },
+  "homepage": "https://github.com/CamiloBeltran24/Personal-presentation-LandingPage#readme",
+  "dependencies": {
+    "sass": "^1.54.3"
+  }
+}

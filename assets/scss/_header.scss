@@ -1,0 +1,183 @@
+.header {
+  position: fixed;
+  background-color: transparent;
+  width: 100%;
+  color: $primary_color;
+  z-index: 100;
+  &.internal {
+    background-color: $white;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+    .header__title {
+      h1 {
+        color: $primary_color;
+        font-weight: 300;
+        span {
+          color: $primary_color;
+          font-weight: 500;
+        }
+      }
+    }
+    .navigation {
+      &__list {
+        li {
+          color: $black;
+          a {
+            color: $black;
+            &:hover {
+              color: $primary_color;
+            }
+          }
+        }
+      }
+      &__sublist {
+        background-color: $white;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+        li {
+          color: $black;
+          &::after,
+          &::before {
+            background-color: $black;
+          }
+          a {
+            color: $black;
+            &:hover {
+              color: $primary_color;
+            }
+          }
+        }
+      }
+    }
+  }
+  .container {
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__name {
+    display: none; // hide the name
+    font-family: $secondary_font;
+    letter-spacing: 1px;
+    color: $black;
+    font-size: 1.4rem;
+    font-weight: 300;
+    span {
+      display: block;
+      font-family: $primary_font;
+      font-size: 2.6rem;
+      color: $primary_color;
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+  }
+  &__title {
+    h1 {
+      color: $white;
+      font-family: $secondary_font;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-weight: 300;
+      font-size: 1.4rem;
+      transition: all 0.3s ease-in-out;
+      span {
+        font-family: $primary_font;
+        font-size: 2.6rem;
+        display: block;
+        color: $white;
+        font-weight: 400;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+  .navigation {
+    position: relative;
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.3s ease-in-out;
+      li {
+        display: inline-block;
+        margin-right: 20px;
+        color: $white;
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-family: $secondary_font;
+        position: relative;
+        padding: 0 10px 0 10px;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+        &::after,
+        &::before {
+          content: '';
+
+          background-color: $white;
+          position: absolute;
+          transition: all 0.3s ease-in-out;
+        }
+        &::after {
+          bottom: -2px;
+          right: 0;
+          width: 0;
+          height: 1px;
+        }
+        &::before {
+          top: 1px;
+          right: 0;
+          height: 0;
+          width: 1px;
+        }
+        &:hover {
+          // color: $primary_color;
+          &::after {
+            width: 100%;
+          }
+          &::before {
+            height: 100%;
+          }
+        }
+        a {
+          color: $white;
+          font-size: 1.4rem;
+          font-weight: 300;
+          font-family: $secondary_font;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          position: relative;
+          display: inline-block;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    }
+    &__sublist {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      bottom: -90px;
+      left: 0;
+      min-width: 200px;
+      width: auto;
+      transition: all 0.3s ease-in-out;
+      opacity: 0;
+      visibility: hidden;
+      z-index: -1;
+      padding: 0 20px;
+      &.visible {
+        visibility: visible;
+        opacity: 1;
+        z-index: 10;
+      }
+
+      li {
+        margin: 0 0 20px 0;
+        width: max-content;
+        a {
+          font-size: 1.2rem;
+          text-transform: capitalize;
+          width: fit-content;
+        }
+      }
+    }
+  }
+}

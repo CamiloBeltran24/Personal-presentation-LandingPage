@@ -1,0 +1,16 @@
+$black: #000;
+$white: #fff;
+$primary_color: #2589bd;
+$green_color: #3ccd34;
+$secondary_color: #a3b4a2;
+$txt_size: 1.6rem;
+$titl_size: 4rem;
+$primary_font: 'Bodoni Moda', serif;
+$secondary_font: 'Montserrat', sans-serif;
+@import url('/assets/fonts/icomoon.woff');
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
